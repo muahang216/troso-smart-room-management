@@ -23,9 +23,9 @@ const HeroSection = () => {
 
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-              <span className="gradient-text">TroSo</span>
-              <span className="text-foreground"> - Nền tảng quản lý nhà trọ </span>
-              <span className="gradient-accent-text">4.0</span>
+              <span className="gradient-text">EZTRO</span>
+              <span className="text-foreground"> - Giải pháp </span>
+              <span className="gradient-accent-text">nhà trọ số</span>
               <span className="text-foreground"> cho người Cần Thơ</span>
             </h1>
 
@@ -78,7 +78,7 @@ const HeroSection = () => {
               {/* Phone mockup */}
               <img 
                 src={phoneMockup} 
-                alt="TroSo App trên điện thoại" 
+                alt="EZTRO App trên điện thoại" 
                 className="relative w-72 md:w-80 lg:w-96 drop-shadow-2xl"
               />
 

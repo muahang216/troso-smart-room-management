@@ -21,7 +21,7 @@ const SocialProofSection = () => {
             {" "}tại Ninh Kiều & Cái Răng
           </h2>
           <p className="text-lg text-muted-foreground">
-            TroSo đã giúp hàng trăm chủ trọ tại Cần Thơ tiết kiệm thời gian và tăng hiệu quả quản lý.
+            EZTRO đã giúp hàng trăm chủ trọ tại Cần Thơ tiết kiệm thời gian và tăng hiệu quả quản lý.
           </p>
         </div>
 
