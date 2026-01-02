@@ -11,10 +11,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <span className="text-primary-foreground font-bold">T</span>
-            </div>
-            <span className="text-xl font-bold text-foreground">TroSo</span>
+            <img src="/logo.svg" alt="EZTRO" className="w-9 h-9" />
+            <span className="text-xl font-bold text-foreground">EZTRO</span>
           </a>
 
           {/* Desktop Navigation */}
