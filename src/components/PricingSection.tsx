@@ -1,6 +1,8 @@
-import { Check } from "lucide-react";
+import { Check, MessageCircle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+
+const ZALO_LINK = "https://zalo.me/0945700813";
 
 const pricingPlans = [
   {
@@ -10,8 +12,7 @@ const pricingPlans = [
     yearlyPrice: "0đ",
     description: "Dành cho chủ trọ nhỏ",
     features: ["Quản lý tối đa 5 phòng", "AI Scan cơ bản", "Thanh toán QR", "Hỗ trợ qua email"],
-    highlighted: false,
-    cta: "Bắt đầu miễn phí"
+    highlighted: false
   },
   {
     name: "Cá nhân",
@@ -20,8 +21,7 @@ const pricingPlans = [
     yearlyPrice: "2.000.000đ",
     description: "Phổ biến nhất",
     features: ["Quản lý tối đa 15 phòng", "AI Scan không giới hạn", "Thanh toán QR tự động", "Báo cáo Excel", "Hỗ trợ ưu tiên"],
-    highlighted: true,
-    cta: "Chọn gói này"
+    highlighted: true
   },
   {
     name: "Phát triển",
@@ -30,8 +30,7 @@ const pricingPlans = [
     yearlyPrice: "4.500.000đ",
     description: "Dành cho nhà trọ lớn",
     features: ["Quản lý tối đa 35 phòng", "Tất cả tính năng Cá nhân", "Đa người quản lý", "Thống kê nâng cao", "Hỗ trợ 24/7"],
-    highlighted: false,
-    cta: "Chọn gói này"
+    highlighted: false
   },
   {
     name: "Chuyên nghiệp",
@@ -40,8 +39,7 @@ const pricingPlans = [
     yearlyPrice: "7.000.000đ",
     description: "Dành cho chuỗi nhà trọ",
     features: ["Quản lý tối đa 50 phòng", "Tất cả tính năng Phát triển", "API tích hợp", "Tài khoản không giới hạn", "Quản lý đa chi nhánh"],
-    highlighted: false,
-    cta: "Chọn gói này"
+    highlighted: false
   }
 ];
 
@@ -101,13 +99,17 @@ const PricingSection = () => {
                 </ul>
 
                 <Button 
-                  className={`w-full ${
+                  className={`w-full gap-2 ${
                     plan.highlighted 
                       ? "bg-primary hover:bg-primary/90" 
                       : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
                   }`}
+                  asChild
                 >
-                  {plan.cta}
+                  <a href={ZALO_LINK} target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="w-4 h-4" />
+                    Liên hệ Admin
+                  </a>
                 </Button>
               </CardContent>
             </Card>
@@ -122,8 +124,11 @@ const PricingSection = () => {
               <p className="text-muted-foreground mb-4">
                 Trên 50 phòng? Liên hệ ngay để nhận báo giá phù hợp với quy mô của bạn.
               </p>
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                Liên hệ tư vấn
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground gap-2" asChild>
+                <a href={ZALO_LINK} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-4 h-4" />
+                  Liên hệ tư vấn
+                </a>
               </Button>
             </CardContent>
           </Card>
