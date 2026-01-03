@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,18 +24,18 @@ const Header = () => {
             <a href="#pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
               Bảng giá
             </a>
-            <a href="#contact" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/contact" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
               Liên hệ
-            </a>
+            </Link>
           </nav>
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" size="sm">
-              Đăng nhập
+            <Button variant="ghost" size="sm" asChild>
+              <Link to="/auth">Đăng nhập</Link>
             </Button>
-            <Button size="sm">
-              Dùng thử miễn phí
+            <Button size="sm" asChild>
+              <Link to="/auth">Dùng thử miễn phí</Link>
             </Button>
           </div>
 
@@ -66,19 +67,19 @@ const Header = () => {
               >
                 Bảng giá
               </a>
-              <a 
-                href="#contact" 
+              <Link 
+                to="/contact" 
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Liên hệ
-              </a>
+              </Link>
               <div className="flex gap-3 pt-4 border-t border-border/50">
-                <Button variant="ghost" size="sm" className="flex-1">
-                  Đăng nhập
+                <Button variant="ghost" size="sm" className="flex-1" asChild>
+                  <Link to="/auth" onClick={() => setIsMenuOpen(false)}>Đăng nhập</Link>
                 </Button>
-                <Button size="sm" className="flex-1">
-                  Dùng thử
+                <Button size="sm" className="flex-1" asChild>
+                  <Link to="/auth" onClick={() => setIsMenuOpen(false)}>Dùng thử</Link>
                 </Button>
               </div>
             </nav>
