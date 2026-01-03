@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Smartphone, Globe } from "lucide-react";
+import { MessageCircle, FileText } from "lucide-react";
 import phoneMockup from "@/assets/phone-mockup.png";
 
 const HeroSection = () => {
@@ -37,17 +37,26 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-up-delay-2">
-              <Button size="lg" className="group gap-3 text-base px-8 py-6 shadow-lg hover:shadow-xl transition-all">
-                <Smartphone className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                Tải ngay trên Android
+              <Button 
+                size="lg" 
+                className="group gap-3 text-base px-8 py-6 shadow-lg hover:shadow-xl transition-all"
+                asChild
+              >
+                <a href="https://zalo.me/0945700813" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                  Liên hệ mua ngay
+                </a>
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="gap-3 text-base px-8 py-6 border-2 hover:bg-secondary transition-all"
+                asChild
               >
-                <Globe className="w-5 h-5" />
-                Dùng bản Web cho Chủ trọ
+                <a href="#contact-form">
+                  <FileText className="w-5 h-5" />
+                  Yêu cầu tư vấn
+                </a>
               </Button>
             </div>
 
